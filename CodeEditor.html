@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roni's Project</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <div class="header">
+        <nav data-header>
+            <div>
+                <h1 data-header-logo>SIGMA</h1>
+            </div>
+        </nav>
+    </div>
+    <div data-editor>
+        <div class="codespace">
+            <h3 data-editor-lable>HTML</h3>
+            <textarea spellcheck="false" onkeyup="excicute()" id="html"></textarea>
+        </div>
+        <div class="codespace">
+            <h3 data-editor-lable>CSS</h3>
+            <textarea spellcheck="false" onkeyup="excicute()" id="css"></textarea>
+        </div>
+        <div class="codespace">
+            <h3 data-editor-lable>JavaScript</h3>
+            <textarea spellcheck="false" onkeyup="excicute()" id="js"></textarea>
+        </div>
+    </div>
+    <div data-output>
+        <iframe frameborder="0" id="output"></iframe>
+    </div>
+    <script>
+        function excicute() {
+            let html = document.getElementById("html").value;
+            let css = document.getElementById("css").value;
+            let js = document.getElementById("js").value;
+            let output = document.getElementById("output");
+            output.contentDocument.body.innerHTML = html + "<style>" + css + "</style>";
+            output.contentWindow.eval(js);
+        }
+    </script>
+</body>
+
+</html>
