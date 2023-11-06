@@ -27,6 +27,7 @@ body{
 }
 
 [data-editor]{
+    padding: 10px 0;
     display: flex;
     justify-content: space-evenly;
     height: 40vh;
@@ -35,7 +36,6 @@ body{
 .codespace{
     width: 32vw;
     height: 100%;
-    /* border: 2px solid white; */
 }
 
 #html ,#css ,#js{
@@ -59,16 +59,16 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: sans-serif;
+    font-family:sans-serif;
     width: 20%;
     height: 30px;
+    font-size: 15px;
     background-color: #1D1E22;
     color:white;
     border: none;
 }
 
 [data-output]{
-    /* border: 2px solid red; */
     background-color: black;
     height: 50vh;
 }
